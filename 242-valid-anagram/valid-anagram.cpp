@@ -6,15 +6,14 @@ public:
        //make freqTable aur o se 255 tak sbko '0' se initialise krdo
         int freqTable[256] = {0};
         for(int i=0; i<s.size(); i++){
-            freqTable[s[i]]++;
+            freqTable[s[i]]++;   // jaise jaise character milega vaise vaise table me add krte jyenge
         }
         for(int i=0; i<t.size(); i++){
-            freqTable[t[i]]--;
+            freqTable[t[i]]--;   //jaise jaise character milega vaise vaise table se minus krte jyenge
         }
-        for(int i=0; i<256; i++){
+        for(int i=0; i<256; i++){  // last 256 tak hoga(0-255)
             if(freqTable[i]!=0) return false;
         }
         return true;
-
     }
 };
