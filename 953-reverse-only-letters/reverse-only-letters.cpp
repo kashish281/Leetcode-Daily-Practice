@@ -3,7 +3,7 @@ public:
     string reverseOnlyLetters(string s) {
         int l=0,h=s.size()-1;
         while(l<h){
-            if(isalpha(s[l]) && isalpha(s[h])){
+            if(isalpha(s[l]) && isalpha(s[h])){  //if alphabet h to swap it 
                 swap(s[l], s[h]);
                 l++;
                 h--;
@@ -11,7 +11,7 @@ public:
             else if(!isalpha(s[l])){
                 l++;
             }
-            else{
+            else{    //s[h] -> non-alpha
                 h--;
             }
         }
